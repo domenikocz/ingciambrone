@@ -1,0 +1,53 @@
+---
+layout: layout.njk
+title: "Ingegneria energetica e fotovoltaico"
+description: "Guide e approfondimenti tecnici su impianti fotovoltaici, efficientamento energetico e accumulo."
+---
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="hero-tag">Ingegneria energetica</span>
+      <h1>Fotovoltaico ed efficienza energetica, spiegati con criterio tecnico</h1>
+      <p>Guide e approfondimenti su dimensionamento di impianti fotovoltaici, accumulo di energia ed efficientamento energetico, per chi vuole capire prima di scegliere.</p>
+      <div class="hero-actions">
+        <a href="/articoli/" class="btn-primary">Leggi gli articoli</a>
+        <a href="https://www.dskshop.it/contatti/" class="btn-outline" target="_blank" rel="noopener">Richiedi una valutazione</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <h3>Di cosa parliamo</h3>
+      <ul>
+        <li>Dimensionamento impianti fotovoltaici</li>
+        <li>Accumulo e autoconsumo energetico</li>
+        <li>Efficientamento energetico degli edifici</li>
+        <li>Aggiornamenti tecnici e normativi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Ultimi articoli</h2>
+    </div>
+    <div class="article-grid">
+      {% for post in collections.articoli %}
+      <div class="article-card">
+        <span class="hero-tag">{{ post.data.categoria }}</span>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.excerpt }}</p>
+        <a class="read-more" href="{{ post.url }}">Leggi l'articolo →</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Stai valutando un impianto fotovoltaico?</h2>
+    <p>DSK Srls progetta impianti su misura, dal dimensionamento all'installazione.</p>
+    <a href="https://www.dskshop.it/contatti/" class="btn-primary">Richiedi una valutazione</a>
+  </div>
+</section>

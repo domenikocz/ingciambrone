@@ -1,0 +1,28 @@
+---
+layout: layout.njk
+title: "Tutti gli articoli"
+description: "Tutti gli approfondimenti su fotovoltaico, accumulo ed efficienza energetica."
+permalink: /articoli/index.html
+---
+<section class="hero" style="padding:48px 0">
+  <div class="wrap">
+    <h1>Tutti gli articoli</h1>
+    <p>Approfondimenti tecnici su fotovoltaico ed efficienza energetica, aggiornati regolarmente.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="article-grid">
+      {% for post in collections.articoli %}
+      <div class="article-card">
+        <span class="hero-tag">{{ post.data.categoria }}</span>
+        <p class="article-meta">{{ post.data.date | dataItaliana }}</p>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.excerpt }}</p>
+        <a class="read-more" href="{{ post.url }}">Leggi l'articolo →</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

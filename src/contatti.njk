@@ -1,0 +1,54 @@
+---
+layout: layout.njk
+title: "Contatti"
+description: "Scrivici per domande sugli articoli o per una valutazione tecnica del tuo impianto."
+---
+<div class="form-page">
+  <h1>Contatti</h1>
+  <p>Per una valutazione tecnica o un preventivo per l'installazione di un impianto, ti consigliamo di scrivere direttamente a <a href="https://www.dskshop.it/contatti/" target="_blank" rel="noopener">DSK Srls</a>. Per domande sugli articoli, usa questo modulo.</p>
+
+  <div id="form-success" class="form-success" hidden>Grazie, il tuo messaggio è stato inviato correttamente.</div>
+  <div id="form-error" class="form-error" hidden>Si è verificato un errore nell'invio. Riprova o scrivici a info@dskshop.it.</div>
+
+  <form action="/php/contatti.php" method="POST" id="contact-form">
+    <div class="field">
+      <label for="nome">Nome *</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
+    <div class="field">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="field">
+      <label for="messaggio">Messaggio *</label>
+      <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+    </div>
+
+    <div class="field honeypot" aria-hidden="true">
+      <label for="sito_web">Non compilare questo campo</label>
+      <input type="text" id="sito_web" name="sito_web" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="field consent-row">
+      <input type="checkbox" id="privacy" name="privacy" required>
+      <label for="privacy" style="font-weight:400;margin:0">
+        Ho letto l'<a href="/privacy/" target="_blank">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato. *
+      </label>
+    </div>
+
+    <button type="submit" class="btn-primary">Invia messaggio</button>
+    <p class="form-note">* Campi obbligatori.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get("esito") === "ok") {
+    document.getElementById("form-success").hidden = false;
+    document.getElementById("contact-form").hidden = true;
+  } else if (params.get("esito") === "errore") {
+    document.getElementById("form-error").hidden = false;
+  }
+})();
+</script>

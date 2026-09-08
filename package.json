@@ -1,0 +1,13 @@
+{
+  "name": "ingciambrone-sito",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sito blog ingciambrone.it — ingegneria energetica e fotovoltaico",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

@@ -1,0 +1,11 @@
+<?php
+// Copia questo file in "config.php" (stessa cartella, dentro php/ una volta caricato sul server)
+// e inserisci i dati reali. config.php NON va mai versionato in git.
+
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'nome_database');
+define('DB_USER', 'utente_database');
+define('DB_PASS', 'password_database');
+
+define('NOTIFY_EMAIL', 'info@dskshop.it');
+define('PRIVACY_VERSION', '1.0');

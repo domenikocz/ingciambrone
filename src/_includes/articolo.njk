@@ -1,0 +1,22 @@
+---
+layout: layout.njk
+---
+<article class="article-page">
+  <div class="wrap" style="max-width:760px">
+    <p class="article-back"><a href="/articoli/">← Tutti gli articoli</a></p>
+    <span class="hero-tag">{{ categoria }}</span>
+    <h1>{{ title }}</h1>
+    <p class="article-meta">Pubblicato il {{ date | dataItaliana }}</p>
+    <div class="article-body">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Stai valutando un impianto fotovoltaico?</h2>
+    <p>DSK Srls progetta impianti su misura, dal dimensionamento all'installazione.</p>
+    <a href="https://www.dskshop.it/contatti/" class="btn-primary">Richiedi un sopralluogo</a>
+  </div>
+</section>

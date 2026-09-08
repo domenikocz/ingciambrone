@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }} | Ing. Ciambrone</title>
+<meta name="description" content="{{ description }}">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="/" class="logo">Ing<span>Ciambrone</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="/">Home</a>
+      <a href="/articoli/">Articoli</a>
+      <a href="/chi-siamo/">Chi siamo</a>
+      <a href="/contatti/" class="btn-nav">Contatti</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+{{ content | safe }}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <strong>Ing. Ciambrone</strong>
+      <p>Un progetto di DSK Srls<br>
+      Via Siracusa 15 — 88100 Catanzaro (CZ)<br>
+      P.IVA 03547330799<br>
+      Email: <a href="mailto:info@dskshop.it">info@dskshop.it</a></p>
+    </div>
+    <div class="footer-col">
+      <strong>Link utili</strong>
+      <p>
+        <a href="/articoli/">Articoli</a><br>
+        <a href="/chi-siamo/">Chi siamo</a><br>
+        <a href="/contatti/">Contatti</a><br>
+        <a href="https://www.dskshop.it/prodotti/domotica/" target="_blank" rel="noopener">Impianti (dskshop.it)</a>
+      </p>
+    </div>
+    <div class="footer-col">
+      <strong>Legale</strong>
+      <p>
+        <a href="/privacy/">Privacy Policy</a><br>
+        <a href="/cookie-policy/">Cookie Policy</a><br>
+        <a href="#" onclick="window.icReopenCookieBanner && window.icReopenCookieBanner(); return false;">Preferenze cookie</a>
+      </p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    &copy; {% year %} Ing. Ciambrone — DSK Srls — Tutti i diritti riservati
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner" hidden>
+  <p>Questo sito utilizza cookie tecnici necessari al funzionamento. Con il tuo consenso, utilizziamo anche cookie di analisi per capire come viene usato il sito. Consulta la <a href="/cookie-policy/">Cookie Policy</a> per maggiori dettagli.</p>
+  <div class="cookie-actions">
+    <button id="cookie-reject" class="btn-outline">Solo necessari</button>
+    <button id="cookie-accept" class="btn-primary">Accetta tutti</button>
+  </div>
+</div>
+
+<script src="/js/cookie-consent.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
