@@ -146,3 +146,7 @@ input:focus,textarea:focus,select:focus{outline:2px solid var(--amber);outline-o
   .article-card,.hero-panel,input,textarea,select{background:#1f1b14;border-color:#332e22;color:#efe9db}
   .btn-outline{background:#1f1b14;color:#efe9db}
 }
+
+.wa-float{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.28);z-index:90;transition:transform .15s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
